@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71c03e57570d023f7bcf20a8c9c76b39c87c2022d18b09af1c31f6e9bb9bbac0
+  sha256: 881daa0aaf76467de7468a3b0b9a060a3eb1f014ee4d9f8479c9148acc2c8bcc
 
 build:
   entry_points:
@@ -25,8 +25,8 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - phonopy >=2.48.0
-    - phono3py >=3.25.0
+    - phonopy >=3.0.1
+    - phono3py >=3.27.1
     - finufft
     - click
     - tomli
