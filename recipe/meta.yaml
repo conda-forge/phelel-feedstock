@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71c03e57570d023f7bcf20a8c9c76b39c87c2022d18b09af1c31f6e9bb9bbac0
+  sha256: 02b92a1efca02646aae04fb9ce4989cf10bd2ad519734f684c4d683500afd99d
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - velph = phelel.velph.cli:cmd_root
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
