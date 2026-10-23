@@ -16,7 +16,7 @@ build:
     - velph = phelel.velph.cli.velph_cmd_root:cmd_root
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
