@@ -30,7 +30,6 @@ requirements:
     - phono3py >=4.8.0
     - finufft
     - click
-    - tomli
     - tomli-w
 
 test:
