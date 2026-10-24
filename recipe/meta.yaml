@@ -1,5 +1,5 @@
 {% set name = "phelel" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e3d6c6a42a4904698aecb432d41132def8eb3c47ea805f9aa0b483b40d99b91f
+  sha256: f414d1d306cb0ff1f32fae22e4ca549585bc68f52912c617ec7b7616c6088c2b
 
 build:
   entry_points:
@@ -16,7 +16,7 @@ build:
     - velph = phelel.velph.cli.velph_cmd_root:cmd_root
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -24,12 +24,12 @@ requirements:
     - setuptools >=61.0
     - pip
   run:
+    - spglib >=2.5.0
     - python >={{ python_min }}
-    - phonopy >=3.0.1
-    - phono3py >=3.27.1
+    - phonopy >=4.8.4
+    - phono3py >=4.8.0
     - finufft
     - click
-    - tomli
     - tomli-w
 
 test:
